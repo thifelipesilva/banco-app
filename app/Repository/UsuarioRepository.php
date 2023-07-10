@@ -18,4 +18,9 @@ class UsuarioRepository
             'password' => Hash::make($dados['password']),
         ]);
     }
+
+    public function procuraUsuario($id): Usuario
+    {
+        return Usuario::findo($id);
+    }
 }

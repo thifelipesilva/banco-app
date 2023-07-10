@@ -15,4 +15,9 @@ class ContaRepository
 
         return $conta;
     }
+
+    public function procuraConta($id): Conta
+    {
+        return Conta::find($id);
+    }
 }
