@@ -16,13 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
 
 
 Route::post('usuario', [AuthController::class, 'registrar']);
-Route::post('login', [AuthController::class, 'logar']);
+Route::post('login', [AuthController::class, 'logar'])->name('login');
+
 Route::post('logout', [AuthController::class, 'deslogar']);
-Route::put('depositar/{id}', [TransacoesController::class, 'depositar']);
-Route::put('transferir/{id}/{conta_destino}', [TransacoesController::class, 'transferir']);
+
+
+
+Route::put('depositar/{id}', [TransacoesController::class, 'depositar'])->middleware('auth:sanctum');
+Route::put('transferir/{id}/{conta_destino}', [TransacoesController::class, 'transferir'])->middleware('auth:sanctum');
