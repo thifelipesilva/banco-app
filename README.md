@@ -1,6 +1,6 @@
 <h1>Projeto Api-Banco</h1>
 
-Projeto de uma aplicação que executa transações bancárias. Eu como pessoa usuária posso criar uma conta e com esta faço login. Usuario Logado pode fazer requisiçôes de depósito e transferência. Sempre que é realizado uma operacao, o sitema gera um código pra depósito e transferência.
+Projeto de uma aplicação que executa transações bancárias. Eu como pessoa usuária posso criar uma conta, no momento que o usuario cadastra o cep, a api faz requisições na api da ViaCep para completar os dados, e com esta fazer login. Usuario Logado pode fazer requisiçôes de depósito e transferência. Sempre que é realizado uma operacao, o sitema gera um código pra depósito e transferência.
 
 Obs: Front-end com Vite-React-ts será implementado.
 
